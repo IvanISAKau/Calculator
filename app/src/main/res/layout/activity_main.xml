@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/default_margin"
             android:gravity="end"
-            android:text="5+10"
+            tools:text="5+10"
             android:textColor="@color/gray"
             android:textSize="@dimen/default_text_size" />
 
@@ -41,7 +41,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/default_margin"
             android:gravity="end"
-            android:text="15"
+            tools:text="15"
             android:textColor="@color/black"
             android:textSize="@dimen/result_text_size" />
 
