@@ -9,33 +9,37 @@
 
     <TextView
         android:id="@+id/process_display"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="@dimen/default_margin"
         android:gravity="end|bottom"
         android:textColor="@color/gray"
-        android:textSize="@dimen/default_text_size"
-        app:layout_constraintBottom_toTopOf="@id/result_display"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="@dimen/land_text_size"
+        tools:text="5+10"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/grid_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/result_display"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintVertical_chainStyle="packed"
         app:layout_constraintVertical_weight="1"
-        tools:text="5+10" />
+        app:layout_constraintHorizontal_weight="1.8"/>
 
     <TextView
         android:id="@+id/result_display"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_margin="@dimen/default_margin"
-        android:gravity="end"
+        android:gravity="end|bottom"
         android:textColor="@color/black"
-        android:textSize="@dimen/result_text_size"
+        android:textSize="@dimen/land_result_text_size"
+        tools:text="15"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/grid_layout"
+        app:layout_constraintStart_toEndOf="@id/process_display"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/process_display"
-        tools:text="15" />
+        app:layout_constraintHorizontal_weight="1"/>
+
 
     <GridLayout
         android:id="@+id/grid_layout"
@@ -44,12 +48,12 @@
         android:layout_marginStart="@dimen/default_margin"
         android:layout_marginEnd="@dimen/default_margin"
         android:layout_marginBottom="@dimen/default_margin"
-        android:columnCount="4"
+        android:columnCount="9"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/result_display"
-        app:layout_constraintVertical_weight="2">
+        app:layout_constraintTop_toBottomOf="@id/process_display"
+        app:layout_constraintVertical_weight="3">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_ac"
@@ -57,19 +61,14 @@
             android:text="@string/clear" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_backspace"
-            style="@style/ActionButton"
-            android:text="@string/backspace" />
+            android:id="@+id/btn_five"
+            style="@style/CalcButton"
+            android:text="@string/five" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_plus_minus"
-            style="@style/ActionButton"
-            android:text="@string/plus_minus" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_division"
-            style="@style/ActionButton"
-            android:text="@string/division" />
+            android:id="@+id/btn_six"
+            style="@style/CalcButton"
+            android:text="@string/six" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_seven"
@@ -87,29 +86,29 @@
             android:text="@string/nine" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_multiply"
-            style="@style/ActionButton"
-            android:text="@string/multiply" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_four"
-            style="@style/CalcButton"
-            android:text="@string/four" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_five"
-            style="@style/CalcButton"
-            android:text="@string/five" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_six"
-            style="@style/CalcButton"
-            android:text="@string/six" />
-
-        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_subtract"
             style="@style/ActionButton"
             android:text="@string/subtract" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_division"
+            style="@style/ActionButton"
+            android:text="@string/division" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_backspace"
+            style="@style/ActionButton"
+            android:text="@string/backspace" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_point"
+            style="@style/CalcButton"
+            android:text="@string/point" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_zero"
+            style="@style/CalcButton"
+            android:text="@string/plus_zero" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_one"
@@ -127,23 +126,28 @@
             android:text="@string/three" />
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_four"
+            style="@style/CalcButton"
+            android:text="@string/four" />
+
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_addition"
             style="@style/ActionButton"
             android:text="@string/addition" />
 
-        <Space style="@style/CalcButton" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_multiply"
+            style="@style/ActionButton"
+            android:text="@string/multiply" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_zero"
-            style="@style/CalcButton"
-            android:text="@string/plus_zero" />
+            android:id="@+id/btn_plus_minus"
+            style="@style/ActionButton"
+            android:text="@string/plus_minus" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_point"
-            style="@style/CalcButton"
-            android:text="@string/point" />
-
-        <com.google.android.material.button.MaterialButton
+            android:layout_column="2"
+            android:layout_columnSpan="5"
             android:id="@+id/btn_equals"
             style="@style/SuperActionButton"
             android:text="@string/equals" />
