@@ -15,15 +15,15 @@
         android:gravity="end|bottom"
         android:textColor="@color/gray"
         android:textSize="@dimen/land_text_size"
-        tools:text="5+10"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/grid_layout"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/result_display"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/result_display"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed"
         app:layout_constraintVertical_weight="1"
-        app:layout_constraintHorizontal_weight="1.8"/>
+        tools:text="5+10" />
 
     <TextView
         android:id="@+id/result_display"
@@ -33,17 +33,17 @@
         android:gravity="end|bottom"
         android:textColor="@color/black"
         android:textSize="@dimen/land_result_text_size"
-        tools:text="15"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/grid_layout"
-        app:layout_constraintStart_toEndOf="@id/process_display"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_weight="1"/>
+        app:layout_constraintEnd_toStartOf="@id/process_display"
+        app:layout_constraintHorizontal_weight="1.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="15" />
 
 
     <GridLayout
         android:id="@+id/grid_layout"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="@dimen/default_margin"
         android:layout_marginEnd="@dimen/default_margin"
@@ -146,10 +146,10 @@
             android:text="@string/plus_minus" />
 
         <com.google.android.material.button.MaterialButton
-            android:layout_column="2"
-            android:layout_columnSpan="5"
             android:id="@+id/btn_equals"
             style="@style/SuperActionButton"
+            android:layout_column="2"
+            android:layout_columnSpan="5"
             android:text="@string/equals" />
     </GridLayout>
 
