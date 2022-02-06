@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/isaki/AndroidStudioProjects/Calculator/app/src/main/res/drawable/gradient_backgraound.xml" value="0.1695" />
+        <entry key="..\:/Users/isaki/AndroidStudioProjects/Calculator/app/src/main/res/drawable/gradient_background.xml" value="0.1695" />
+        <entry key="..\:/Users/isaki/AndroidStudioProjects/Calculator/app/src/main/res/layout-land/activity_main.xml" value="0.20863616930312098" />
         <entry key="..\:/Users/isaki/AndroidStudioProjects/Calculator/app/src/main/res/layout/activity_main.xml" value="0.25" />
       </map>
     </option>
