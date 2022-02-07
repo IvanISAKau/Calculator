@@ -20,4 +20,10 @@
     <string name="plus_zero">0</string>
     <string name="point">.</string>
     <string name="equals">=</string>
+    <string name="everlasting_sky">Everlasting Sky</string>
+    <string name="cloudy_apple">Cloudy apple</string>
+    <string name="new_york">New York</string>
+    <string name="blessing">Blessing</string>
+    <string name="white">White</string>
+    <string name="choose_a_theme">Choose a theme:</string>
 </resources>

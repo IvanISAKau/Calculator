@@ -9,6 +9,12 @@
     <color name="white">#FFFFFFFF</color>
     <color name="gray">#757575</color>
     <color name="orange">#FF7043</color>
-    <color name="gradient_background_1">#fdfcfb</color>
-    <color name="gradient_background_2">#e2d1c3</color>
+    <color name="gradient_1">#fdfcfb</color>
+    <color name="gradient_2">#e2d1c3</color>
+    <color name="gradient_3">#f3e7e9</color>
+    <color name="gradient_4">#e3eeff</color>
+    <color name="gradient_5">#fff1eb</color>
+    <color name="gradient_6">#ace0f9</color>
+    <color name="gradient_7">#fddb92</color>
+    <color name="gradient_8">#d1fdff</color>
 </resources>

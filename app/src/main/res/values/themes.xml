@@ -13,4 +13,21 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="Theme.CalculatorV2" parent="Theme.Calculator">
+        <item name="android:background">@drawable/background_cloudy_apple</item>
+    </style>
+
+    <style name="Theme.CalculatorV3" parent="Theme.Calculator">
+        <item name="android:background">@drawable/background_new_york</item>
+    </style>
+
+    <style name="Theme.CalculatorV4" parent="Theme.Calculator">
+        <item name="android:background">@drawable/background_blessing</item>
+    </style>
+
+    <style name="Theme.CalculatorV5" parent="Theme.Calculator">
+        <item name="android:background">@drawable/background_everlasting_sky</item>
+    </style>
+
 </resources>
