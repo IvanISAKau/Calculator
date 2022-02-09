@@ -1,5 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
 <resources>
-    <string name="app_name">Calculator</string>
+    <string name="app_name">Калькулятор</string>
     <string name="clear">ac</string>
     <string name="percent">%</string>
     <string name="division">÷</string>
@@ -20,10 +22,10 @@
     <string name="plus_zero">0</string>
     <string name="point">.</string>
     <string name="equals">=</string>
-    <string name="everlasting_sky">Everlasting Sky</string>
-    <string name="cloudy_apple">Cloudy apple</string>
-    <string name="new_york">New York</string>
-    <string name="blessing">Blessing</string>
-    <string name="white">White</string>
-    <string name="choose_a_theme">Choose a theme:</string>
+    <string name="everlasting_sky">Бесконечное небо</string>
+    <string name="cloudy_apple">Облачное яблоко</string>
+    <string name="new_york">Нью-Йорк</string>
+    <string name="blessing">Благословение</string>
+    <string name="white">Белая</string>
+    <string name="choose_a_theme">Выберите тему:</string>
 </resources>

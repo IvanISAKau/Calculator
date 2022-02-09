@@ -1,11 +1,22 @@
-package com.example.calculator;
+package com.example.calculator.ui;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+
+import com.example.calculator.Calculator;
+import com.example.calculator.domain.Theme;
+import com.example.calculator.R;
+import com.example.calculator.storage.ThemeStorage;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,6 +30,26 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        ThemeStorage storage = new ThemeStorage(this);
+
+        ActivityResultLauncher<Intent> settingsLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
+            @Override
+            public void onActivityResult(ActivityResult result) {
+
+                if (result.getResultCode() == Activity.RESULT_OK) {
+                    Theme theme = (Theme) result.getData().getSerializableExtra(SelectThemeActivity.THEME_RESULT);
+
+                    storage.saveTheme(theme);
+
+                    recreate();
+                }
+
+            }
+        });
+
+        setTheme(storage.getTheme().getStyle());
+
         setContentView(R.layout.activity_main);
 
         if (savedInstanceState == null) {
@@ -26,6 +57,15 @@ public class MainActivity extends AppCompatActivity {
         } else calculator = savedInstanceState.getParcelable(ARG_CALCULATOR);
 
         initView();
+
+        findViewById(R.id.btn_settings).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                settingsLauncher.launch(SelectThemeActivity.intent(MainActivity.this, storage.getTheme()));
+
+            }
+        });
 
     }
 

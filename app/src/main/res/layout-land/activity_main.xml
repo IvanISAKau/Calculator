@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_background"
-    tools:context=".MainActivity">
+    tools:context=".ui.MainActivity">
 
     <TextView
         android:id="@+id/process_display"
@@ -15,15 +14,16 @@
         android:gravity="end|bottom"
         android:textColor="@color/gray"
         android:textSize="@dimen/land_text_size"
-        tools:text="5+10"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/grid_layout"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/result_display"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/result_display"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed"
         app:layout_constraintVertical_weight="1"
-        app:layout_constraintHorizontal_weight="1.8"/>
+        android:background="@android:color/transparent"
+        tools:text="5+10" />
 
     <TextView
         android:id="@+id/result_display"
@@ -33,17 +33,18 @@
         android:gravity="end|bottom"
         android:textColor="@color/black"
         android:textSize="@dimen/land_result_text_size"
-        tools:text="15"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/grid_layout"
-        app:layout_constraintStart_toEndOf="@id/process_display"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_weight="1"/>
+        app:layout_constraintEnd_toStartOf="@id/process_display"
+        app:layout_constraintHorizontal_weight="1.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@android:color/transparent"
+        tools:text="15" />
 
 
     <GridLayout
         android:id="@+id/grid_layout"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="@dimen/default_margin"
         android:layout_marginEnd="@dimen/default_margin"
@@ -53,6 +54,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/process_display"
+        android:background="@android:color/transparent"
         app:layout_constraintVertical_weight="3">
 
         <com.google.android.material.button.MaterialButton
@@ -145,11 +147,16 @@
             style="@style/ActionButton"
             android:text="@string/plus_minus" />
 
+        <ImageButton
+            android:id="@+id/btn_settings"
+            style="@style/CalcButton"
+            android:src="@drawable/ic_settings" />
+
         <com.google.android.material.button.MaterialButton
-            android:layout_column="2"
-            android:layout_columnSpan="5"
             android:id="@+id/btn_equals"
             style="@style/SuperActionButton"
+            android:layout_column="2"
+            android:layout_columnSpan="5"
             android:text="@string/equals" />
     </GridLayout>
 

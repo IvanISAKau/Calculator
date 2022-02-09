@@ -8,14 +8,13 @@
         <item name="android:layout_marginEnd">@dimen/default_margin</item>
         <item name="android:textColor">@color/gray</item>
         <item name="android:textSize">@dimen/default_text_size</item>
-
     </style>
 
     <style name="ActionButton" parent="CalcButton">
         <item name="android:textColor">@color/orange</item>
     </style>
 
-    <style name="SuperActionButton" >
+    <style name="SuperActionButton" parent="Widget.MaterialComponents.Button">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">0dp</item>
         <item name="android:layout_rowWeight">1</item>

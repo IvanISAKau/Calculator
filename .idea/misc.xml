@@ -3,10 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/isaki/AndroidStudioProjects/Calculator/app/src/main/res/drawable/background_blessing.xml" value="0.165" />
+        <entry key="..\:/Users/isaki/AndroidStudioProjects/Calculator/app/src/main/res/drawable/background_everlasting_sky.xml" value="0.165" />
+        <entry key="..\:/Users/isaki/AndroidStudioProjects/Calculator/app/src/main/res/drawable/background_new_york.xml" value="0.134" />
         <entry key="..\:/Users/isaki/AndroidStudioProjects/Calculator/app/src/main/res/drawable/gradient_backgraound.xml" value="0.1695" />
         <entry key="..\:/Users/isaki/AndroidStudioProjects/Calculator/app/src/main/res/drawable/gradient_background.xml" value="0.1695" />
+        <entry key="..\:/Users/isaki/AndroidStudioProjects/Calculator/app/src/main/res/drawable/gradient_background_2.xml" value="0.163" />
+        <entry key="..\:/Users/isaki/AndroidStudioProjects/Calculator/app/src/main/res/drawable/gradient_background_3.xml" value="0.163" />
+        <entry key="..\:/Users/isaki/AndroidStudioProjects/Calculator/app/src/main/res/drawable/ic_settings.xml" value="0.163" />
         <entry key="..\:/Users/isaki/AndroidStudioProjects/Calculator/app/src/main/res/layout-land/activity_main.xml" value="0.20863616930312098" />
         <entry key="..\:/Users/isaki/AndroidStudioProjects/Calculator/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/isaki/AndroidStudioProjects/Calculator/app/src/main/res/layout/activity_select_theme.xml" value="0.22103463018383926" />
+        <entry key="..\:/Users/isaki/AndroidStudioProjects/Calculator/app/src/main/res/layout/activity_settings.xml" value="0.22103463018383926" />
+        <entry key="..\:/Users/isaki/AndroidStudioProjects/Calculator/app/src/main/res/layout/item_theme.xml" value="0.22103463018383926" />
       </map>
     </option>
   </component>
